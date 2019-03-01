@@ -16,7 +16,11 @@ import './icons' // icon
 import './errorLog' // error log
 import './permission' // permission control
 import './mock' // simulation data
+import Bmob from 'hydrogen-js-sdk' // Bmob引入
 
+Bmob.initialize('9aa35c79101ae393a3cae8480f491f40', '7c3962ad543cdc756e5a3d1ba40be2c3') // 初始化Bmob
+
+Vue.prototype.Bmob = Bmob // 挂载到全局使用
 import * as filters from './filters' // global filters
 
 Vue.use(Element, {
